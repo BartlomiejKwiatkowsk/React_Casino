@@ -1,0 +1,175 @@
+.roulette-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #3B4A59;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ECF0F1;
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.roulette-wheel-container {
+    width: 360px;
+    overflow: hidden;
+    position: relative;
+    height: 50px; /* Adjust height to match the slots */
+    background-color: #1E272E;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.roulette-wheel {
+    display: flex;
+    position: relative;
+    width: calc(360px * 7); /* Adjust to allow smooth scrolling */
+    transition: transform 4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother animation */
+}
+
+.roulette-slot {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border: 2px solid transparent; /* Default border */
+    border-radius: 50%; /* Ensures rounded corners */
+}
+
+.red {
+    background-color: red;
+}
+
+.black {
+    background-color: black; /* Ensure black background */
+}
+
+.green {
+    background-color: green;
+}
+
+.betting-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-top: 2vw;
+}
+
+.betting-controls label {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.betting-controls input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #34495E;
+    font-size: 1em;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+}
+
+.color-buttons {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.bet-button {
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.bet-button.red {
+    background-color: red !important; /* Red background */
+}
+
+.bet-button.black {
+    background-color: black !important; /* Black background */
+}
+
+.bet-button.green {
+    background-color: green !important; /* Green background */
+}
+
+.bet-button.selected {
+    border: 2px solid #ffffff !important; /* White border for selected button */
+}
+
+.bet-button:disabled {
+    cursor: not-allowed;
+    background-color: #555555 !important; /* Grey out disabled button */
+}
+
+.bet-button:hover {
+    transform: scale(1.05);
+}
+
+.message {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message.win {
+    color: green;
+}
+
+.message.loss {
+    color: red;
+}
+
+/* Night mode styles */
+body.night-mode .roulette-container {
+    background-color: #1E1E1E;
+}
+
+body.night-mode .betting-controls input {
+    background-color: #3B4A59;
+    color: #ECF0F1;
+}
+
+body.night-mode .roulette-container .betting-controls .bet-button.red {
+    background-color: #c0392b !important; /* Ensure correct red background in night mode */
+}
+
+body.night-mode .roulette-container .betting-controls .bet-button.black {
+    background-color: #000000 !important; /* Ensure correct black background in night mode */
+}
+
+body.night-mode .roulette-container .betting-controls .bet-button.green {
+    background-color: #27ae60 !important; /* Ensure correct green background in night mode */
+}
+
+body.night-mode .bet-button.selected {
+    border: 2px solid #ffffff !important; /* White border for selected button */
+}
+
+body.night-mode .bet-button:disabled {
+    cursor: not-allowed;
+    background-color: #555555 !important; /* Grey out disabled button */
+}
+
+body.night-mode .message.win {
+    color: lightgreen;
+}
+
+body.night-mode .message.loss {
+    color: lightcoral;
+}
+

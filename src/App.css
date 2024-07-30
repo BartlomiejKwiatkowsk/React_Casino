@@ -1,0 +1,106 @@
+body {
+    background-color: #2C3E50;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-container {
+    padding-top: 70px;
+    background-color: #2C3E50;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+    margin-top: 15%;
+}
+
+.content {
+    background-color: #3B4A59;
+    color: #ECF0F1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+body.night-mode .content-container,
+html.night-mode .content-container {
+    background-color: #121212;
+}
+
+body.night-mode .content,
+html.night-mode .content {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+}
+
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 0;
+    margin-top: 100px;
+    background-color: #2C3E50;
+
+}
+
+.game-container > * {
+    max-width: 100%;
+}
+
+.current-game-container {
+    text-align: center;
+    margin-top: 5vw; /* Add margin-top to move the title down */
+}
+
+.game-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: capitalize; /* Optional: If you want to capitalize the first letter of each word */
+}
+
+.footer {
+    background-color: #3B4A59;
+    color: #ECF0F1;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer a {
+    color: #1ABC9C;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Night mode styles */
+
+
+body.night-mode .footer {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+}
+
+body.night-mode .footer a {
+    color: #2196F3;
+}

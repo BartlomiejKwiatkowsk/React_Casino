@@ -1,0 +1,187 @@
+:root {
+    --slider-value: 50%;
+}
+
+.minesweeper-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.settings {
+    margin-right: 20px;
+    background-color: #3B4A59;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ECF0F1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.settings .bomb-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.settings .bomb-option {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #34495E;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #ECF0F1;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.settings .bomb-option.active {
+    border-color: #1ABC9C;
+}
+
+.settings input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #34495E;
+    font-size: 1em;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    -moz-appearance: textfield;
+}
+
+.settings input::-webkit-outer-spin-button,
+.settings input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.settings button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1ABC9C;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #ECF0F1;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.settings button:hover {
+    background-color: #16A085;
+    transform: scale(1.05);
+}
+
+.minesweeper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 70px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 70px;
+    height: 70px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #999;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.cell .multiplier {
+    font-size: 0.8em;
+    color: #1ABC9C;
+    display: none;
+}
+
+.cell.flipped .multiplier {
+    display: block;
+}
+
+.cell.flipped {
+    background-color: #fff;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+}
+
+.message {
+    font-size: 1.5em;
+    color: #E74C3C;
+    margin-bottom: 10px;
+}
+
+.cashout-message {
+    font-size: 1.5em;
+    color: green;
+    margin-bottom: 10px;
+}
+
+.potential-points {
+    font-size: 1.2em;
+    color: orange;
+    margin-top: 10px;
+}
+/* Night mode styles */
+body.night-mode .settings {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+}
+
+body.night-mode .settings .bomb-option {
+    background-color: #2C3E50;
+}
+
+body.night-mode .settings .bomb-option.active {
+    border-color: #2196F3;
+}
+
+body.night-mode .settings input {
+    background-color: #3B4A59;
+    color: #ECF0F1;
+}
+
+body.night-mode .settings button {
+    background-color: #2196F3;
+}
+
+body.night-mode .settings button:hover {
+    background-color: #21517e;
+}
+
+body.night-mode .cell {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+}
+
+body.night-mode .cell.flipped {
+    background-color: #34495E;
+}
+body.night-mode .multiplier {
+    color: #ffffff;
+}

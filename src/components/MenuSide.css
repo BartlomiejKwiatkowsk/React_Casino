@@ -1,0 +1,122 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #4b5f7c;
+    overflow-x: hidden;
+    transition: 0.3s;
+    z-index: 1001;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #ECF0F1;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+    color: #ECF0F1;
+    border-bottom: 1px solid #2C3E50;
+}
+
+.sidebar ul li:hover {
+    background-color: #1ABC9C;
+    cursor: pointer;
+}
+
+.night-mode-container {
+    padding: 10px;
+    text-align: center;
+    background-color: #34495E;
+    color: #ECF0F1;
+    border-top: 1px solid #2C3E50;
+}
+
+.night-mode-label {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 0.75em;
+    color: #ECF0F1;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2.125em;
+    height: 1.25em;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 1.25em;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 0.875em;
+    width: 0.875em;
+    left: 0.1875em;
+    bottom: 0.1875em;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(0.875em);
+}
+
+/* Night mode styles for MenuSide */
+body.night-mode .sidebar {
+    background-color: #423c3c;
+}
+
+body.night-mode .sidebar ul li {
+    border-bottom: 1px solid #1E1E1E;
+}
+
+body.night-mode .sidebar ul li:hover {
+    background-color: #333;
+}
+
+body.night-mode .night-mode-container {
+    background-color: #333;
+}

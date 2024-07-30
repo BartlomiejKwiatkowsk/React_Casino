@@ -1,0 +1,67 @@
+.history-container {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #34495E;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    color: #ECF0F1;
+    font-family: 'Arial', sans-serif;
+}
+
+.history-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.history-item.win {
+    background-color: #1ABC9C;
+    color: #fff;
+}
+
+.history-item.loss {
+    background-color: #E74C3C;
+    color: #fff;
+}
+
+.history-item .game-name {
+    flex: 2;
+}
+
+.history-item .result-points {
+    flex: 1;
+    text-align: center;
+}
+
+.history-item .result-exp {
+    flex: 1;
+    text-align: center;
+}
+
+/* Night mode styles */
+body.night-mode .history-container {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+}
+
+body.night-mode .history-item.win {
+    background-color: #16A085;
+}
+
+body.night-mode .history-item.loss {
+    background-color: #C0392B;
+}

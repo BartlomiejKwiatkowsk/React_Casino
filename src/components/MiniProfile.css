@@ -1,0 +1,50 @@
+.mini-profile-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: #ECF0F1;
+}
+
+.mini-avatar {
+    width: 40px; /* Adjusted avatar size */
+    height: 40px; /* Adjusted avatar size */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.mini-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mini-level {
+    font-size: 1em; /* Adjusted font size */
+}
+
+.mini-progress-bar {
+    width: 60px; /* Adjusted progress bar width */
+    height: 8px; /* Adjusted progress bar height */
+    background-color: #1f2833;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.mini-progress {
+    height: 100%;
+    background-color: #1ABC9C;
+}
+
+/* Night mode styles */
+body.night-mode .mini-profile-container {
+    color: #E0E0E0;
+}
+
+body.night-mode .mini-progress-bar {
+    background-color: #121212;
+}
+
+body.night-mode .mini-progress {
+    background-color: #2196F3;
+}

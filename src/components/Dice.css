@@ -1,0 +1,220 @@
+:root {
+    --slider-value: 50%;
+}
+
+.multiplier-info {
+    font-size: 1.2em;
+    margin: 10px;
+    text-align: center;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1; /* Ustawiamy flex dla responsywności */
+}
+
+.dice-container {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #3B4A59;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ECF0F1;
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    width: 100%;
+    position: relative; /* Added for positioning the result indicator */
+}
+
+.dice-image {
+    width: 50px;
+    height: 50px;
+}
+
+.dice-result-indicator {
+    position: absolute;
+    margin-left: 15px;
+    bottom: 0px;
+    transform: translateX(-50%);
+    user-select: none;
+}
+
+.roll-button {
+    width: 60%;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #1ABC9C;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+.roll-button:hover {
+    background-color: #16A085;
+    transform: scale(1.05);
+}
+.betting-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.betting-controls label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.betting-controls input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #34495E;
+    font-size: 1em;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    -moz-appearance: textfield;
+}
+.betting-controls input[type="number"]::-webkit-outer-spin-button,
+.betting-controls input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.result {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result.win {
+    color: green;
+}
+
+.result.loss {
+    color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* Night mode styles */
+body.night-mode .roll-button {
+    background-color: #2196F3;
+}
+body.night-mode .roll-button:hover {
+    background-color: #21517e;
+}
+
+body.night-mode .dice-container {
+    background-color: #1E1E1E;
+}
+
+body.night-mode .betting-controls input[type="number"] {
+    background-color: #3B4A59;
+    color: #ECF0F1;
+}
+
+body.night-mode .betting-controls button {
+    background-color: #2196F3;
+}
+
+body.night-mode .betting-controls button:hover {
+    background-color: #1E90FF;
+}
+
+body.night-mode .result.win {
+    color: lightgreen;
+}
+
+body.night-mode .result.loss {
+    color: lightcoral;
+}
+
+.slider-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.slider-container input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .15s ease-in-out;
+}
+
+.slider-container input[type="range"]::before {
+    display: none;
+}
+
+.slider-container input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    background: linear-gradient(to right, #be3838 0%, #be3838 var(--slider-value), #23d523 var(--slider-value), #3ada3a 100%);
+    border-radius: 5px;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+    bottom: 5px; /* Usuń kropeczkę */
+}
+
+.slider-container input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.result-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .result-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .multiplier-info {
+        width: 100%;
+    }
+
+    .roll-button {
+        width: 100%;
+    }
+}
